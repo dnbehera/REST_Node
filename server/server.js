@@ -16,6 +16,4 @@ app.use(bodyParser.json());
 app.use('/lions', lionRouter);
 app.use('/tigers', tigerRouter);
 
-
-app.listen(3000, () => console.log('App started on port: 3000'));
-module.export = app;
+module.exports = app;

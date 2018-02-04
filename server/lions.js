@@ -1,4 +1,5 @@
 var lionRouter = require('express').Router();
+var _ = require('lodash');
 
 var lions = [];
 var id =0;
@@ -32,7 +33,7 @@ lionRouter.post('/', updateId, (req, res) => {
     res.json(req.body);
 });
 
-lionRouter.put('/:id', (req, res) => {
+lionRouter.post('/:id', (req, res) => {
     let lion = req.body;
     for( let i = 0; i < lions.length; i++){
         if ( req.params.id === lions[i].id ){
@@ -40,7 +41,8 @@ lionRouter.put('/:id', (req, res) => {
             break;
         }
     }
-    res.json(lions);
+    console.log('params:' , req.url, req.body);
+    res.json(lion);
 });
 
 lionRouter.delete('/:id', (req, res) => {

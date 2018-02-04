@@ -2,16 +2,18 @@
   "name": "node_rest_mongodb",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha server/server.spec"
   },
   "author": "dnbehera",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "supertest": "^3.0.0"
   }
 }
